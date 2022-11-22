@@ -94,7 +94,7 @@ n = (1/sqrt(2))*[randn(1,length(yy)) + 1j*randn(1,length(yy))];
 sigma = sqrt(1/((log2(M))*EbN0)); % Symbol energy is normalized to Unity
 
 r = yy + sigma*n;
-
+scatterplot(r);
 % Calculation of Euclidian Distances of received symbols from reference symobols 
 min_dist_index = [];
 for i=1:length(r) Dist = [];
