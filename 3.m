@@ -30,21 +30,3 @@ inputSig = [1 2 3 3];
 code = huffmanenco(inputSig,dict);
 disp(code);
 
-%Entropy h(x)
-Hx=0;
-for i=1:4
-  Hx=Hx+(-(p(i)*log2(p(i))));
-end 
-disp(Hx)
-
-Lx = 0;
-for i = 1:4
-  Lx = Lx +inputSig(i)  *p(i);
-end
-disp(Lx)
- 
-Nn = Hx/Lx;
-disp(Nn)
-
-Redun = 1 - Nn;
-display(Redun);
